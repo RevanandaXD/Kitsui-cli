@@ -2,6 +2,8 @@
 
 > A powerful command-line assistant to kickstart new projects and streamline your development workflow.
 
+![inspiration](https://static.wikia.nocookie.net/sewayaki-kitsune-no-senkosan/images/0/0a/Senko.png/revision/latest/scale-to-width-down/1200?cb=20190425152125)
+
 Kitsui (Kitsu CLI) is a versatile CLI tool packed with helpful utilities like project initialization, local tunneling, static file serving, API mocking, deployment, and git automation.
 
 ---
