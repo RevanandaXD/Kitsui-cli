@@ -1,0 +1,25 @@
+{
+  "name": "kitsui",
+  "version": "1.0.0",
+  "description": "command line assistant to start a new project",
+  "keywords": [
+    "cli"
+  ],
+  "bin": {
+    "kitsui": "bin/index.js"
+  },
+  "license": "ISC",
+  "author": "revananda",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "cross-spawn": "^7.0.6",
+    "fs-extra": "^11.0.0",
+    "inquirer": "^9.0.0"
+  }
+}
