@@ -13,7 +13,7 @@ Kitsui (Kitsu CLI) is a versatile CLI tool packed with helpful utilities like pr
 You can install Kitsui globally using npm:
 
 ```bash
-npm install -g kitsui
+npm install -g kitsui-cli
 ```
 
 _(Note: If you haven't published it yet, you can link it locally by running `npm link` inside the project directory)._
