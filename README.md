@@ -16,8 +16,6 @@ You can install Kitsui globally using npm:
 npm install -g kitsui-cli
 ```
 
-_(Note: If you haven't published it yet, you can link it locally by running `npm link` inside the project directory)._
-
 ---
 
 ## 🚀 Usage
