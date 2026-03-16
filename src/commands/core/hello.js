@@ -1,12 +1,10 @@
 const chalk = require("chalk");
-const packageJson = require("../package.json");
+const packageJson = require("../../../package.json");
 
 module.exports = function hello() {
-  // Witty title & separator
   const title = `${chalk.hex("#fcd12a").bold("kitsui")}@${chalk.hex("#FA709A").bold("cli")}`;
   const separator = chalk.gray("-".repeat(9));
 
-  // Cute Fox ASCII Art (Senko-san style coloring)
   const foxArt = [
     `    ⠀⠀⢰⠢⣄⠀⠀⠀⠀⠀    ⣀⣀     `,
     `⠀⠀⠀⠀⠀⠀⠈⡄⢀⠙⢦⣀⠀⠀⠀⢀⢎⢀⠦⢹     `,

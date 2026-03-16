@@ -1,12 +1,12 @@
 {
   "name": "kitsui-cli",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "command line assistant to start a new project",
   "keywords": [
     "cli"
   ],
   "bin": {
-    "kitsui": "bin/index.js"
+    "kitsui": "src/bin/index.js"
   },
   "license": "ISC",
   "author": "revananda",
@@ -17,9 +17,12 @@
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "city-timezones": "^1.0.0",
     "commander": "^11.0.0",
     "cross-spawn": "^7.0.6",
     "fs-extra": "^11.0.0",
-    "inquirer": "^9.0.0"
+    "inquirer": "^9.0.0",
+    "update-notifier": "^7.0.0",
+    "figlet": "^1.5.2"
   }
 }

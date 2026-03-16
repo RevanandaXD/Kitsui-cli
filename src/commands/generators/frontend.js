@@ -1,8 +1,15 @@
 const inquirer = require("inquirer").default;
 const chalk = require("chalk");
 const spawn = require("cross-spawn");
+const figlet = require("figlet");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = async function frontend() {
+  console.log("");
+  console.log(chalk.cyanBright(figlet.textSync("FRONTEND", { font: "Small" })));
+  console.log("");
+
   const { projectName } = await inquirer.prompt([
     {
       type: "input",
@@ -31,56 +38,36 @@ module.exports = async function frontend() {
     },
   ]);
 
+  console.log(chalk.gray(`\n  ╭${"─".repeat(50)}╮`));
+  console.log(chalk.gray(`  │ `) + chalk.cyan(`Scaffolding ${buildTools} project...`.padEnd(48)) + chalk.gray(" │"));
+  console.log(chalk.gray(`  ╰${"─".repeat(50)}╯\n`));
+
   switch (buildTools) {
     case "Vite":
-      spawn("npm", ["create", "vite@latest", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npm", ["create", "vite@latest", projectName], { stdio: "inherit", shell: true });
       break;
     case "Next.js":
-      spawn("npx", ["create-next-app@latest", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npx", ["create-next-app@latest", projectName], { stdio: "inherit", shell: true });
       break;
     case "Astro":
-      spawn("npm", ["create", "astro@latest", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npm", ["create", "astro@latest", projectName], { stdio: "inherit", shell: true });
       break;
     case "Remix":
-      spawn("npx", ["create-remix@latest", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npx", ["create-remix@latest", projectName], { stdio: "inherit", shell: true });
       break;
     case "SvelteKit":
-      spawn("npm", ["create", "svelte@latest", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npm", ["create", "svelte@latest", projectName], { stdio: "inherit", shell: true });
       break;
     case "Nuxt.js":
-      spawn("npx", ["nuxi@latest", "init", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npx", ["nuxi@latest", "init", projectName], { stdio: "inherit", shell: true });
       break;
     case "Gatsby":
-      spawn("npx", ["gatsby", "new", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npx", ["gatsby", "new", projectName], { stdio: "inherit", shell: true });
       break;
     case "Angular":
-      spawn("npx", ["@angular/cli", "new", projectName], {
-        stdio: "inherit",
-        shell: true,
-      });
+      spawn("npx", ["@angular/cli", "new", projectName], { stdio: "inherit", shell: true });
       break;
   }
 
-  console.log("Selected:", buildTools);
+  console.log(`\n  ${chalk.bgGreen.black.bold(" SUCCESS ")} ${chalk.green(`Successfully initiated ${buildTools} project in ${projectName}!`)}\n`);
 };
